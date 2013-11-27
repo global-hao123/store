@@ -1,0 +1,16 @@
+{
+  "name": "store",
+  "version": "1.0.1",
+  "authors": [
+    "songyaru <songyaru@baidu.com>"
+  ],
+  "description": "",
+  "keywords": [
+  ],
+  "license": "MIT",
+  "homepage": "http://gitlab.pro/common-ui/store",
+  "ignore": [
+    "**/*",
+    "!src/**"
+  ]
+}
