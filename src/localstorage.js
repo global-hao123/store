@@ -39,7 +39,7 @@
 //    };
 
       require.async("localstorage",function(){
-          var flashCookie=$.hao123.localcookie.getInstance();
+          var flashCookie=$.hao123.storage.getInstance();
           $.localStorage.getItem = function (key) {
               return flashCookie.storage('val',key);
           };
