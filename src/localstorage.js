@@ -31,12 +31,22 @@
   } else if (isWin8Ie10 != null) {
     //todo use $.cookie
     $.localStorage = {};
-    $.localStorage.getItem = function (key) {
-      return $.cookie(key);
-    };
-    $.localStorage.setItem = function (key, value) {
-      return $.cookie(key, value, {expires: 2000, path: "/" });
-    };
+//    $.localStorage.getItem = function (key) {
+//      return $.cookie(key);
+//    };
+//    $.localStorage.setItem = function (key, value) {
+//      return $.cookie(key, value, {expires: 2000, path: "/" });
+//    };
+
+      require.async("localstorage",function(){
+          var flashCookie=$.hao123.localcookie.getInstance();
+          $.localStorage.getItem = function (key) {
+              return flashCookie.storage('val',key);
+          };
+          $.localStorage.setItem = function (key,val) {
+              return flashCookie.storage('val',key,val);
+          };
+      });
     return;
   }
 
